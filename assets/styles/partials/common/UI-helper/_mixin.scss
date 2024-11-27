@@ -1,0 +1,241 @@
+/*---------------------------------- fonts ----------------------------------*/
+@mixin font($name: "my-font",$srcName,$srcPath,$weight: 200) {
+  @font-face {
+    font-family: $name;
+    font-display: swap;
+    font-style: normal;
+    font-weight: $weight;
+    src: url("../fonts/"+ ($srcPath) + "/woff/" + ($srcName) + ".woff") format("woff");
+    src:  url("../fonts/"+ ($srcPath) + "/ttf/" + ($srcName) + ".ttf") format("truetype"),
+
+
+  }
+};
+@mixin fontTW($name: "my-font",$srcName,$srcPath,$weight: 200) {
+  @font-face {
+    font-family: $name;
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+    src: url("../fonts/" + ($srcPath) + "/ttf/" + ($srcName) + ".ttf") format("truetype"),
+    url("../fonts/"+ ($srcPath) + "/woff/" + ($srcName) + ".woff") format("woff");
+  }
+};
+/*---------------------------------- ellipsis ----------------------------------*/
+@mixin ellipsis($width: 100%, $height: 50px, $manyColumn: 'no', $column: 0) {
+  @if ($manyColumn == "no") {
+    width: $width;
+    height: $height;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }@else {
+    width: $width;
+    height: $height;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    -webkit-line-clamp: $column;
+    -webkit-box-orient: vertical;
+  }
+}
+
+/*---------------------------------- line text ----------------------------------*/
+@mixin lineText($clamp) {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $clamp;
+}
+
+/*---------------------------------- text gradient ----------------------------------*/
+@mixin textGradiant($background: -webkit-linear-gradient(#eee, #333)) {
+  background: $background;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+/*---------------------------------- glass effect ----------------------------------*/
+@mixin glassEffect($background: rgba(255,255,255,0.3), $blur: 5px) {
+  background: $background;
+  backdrop-filter: blur($blur);
+}
+/*---------------------------------- card shadow ----------------------------------*/
+@mixin cardshadow($zIndex: 1,$shadow: $card-shadow-background, $before: true){
+  @if ($before) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: $shadow;
+      z-index: $zIndex;
+    }
+  }
+  @else {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: $shadow;
+      z-index: $zIndex;
+    }
+  }
+}
+
+/*---------------------------------- font icon ----------------------------------*/
+@mixin fontIcon() {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*---------------------------------- overlay ----------------------------------*/
+@mixin overlay ($color: $secondary-color, $opacity: 0.5,$z-index: 0) {
+  &::before {
+    content: "";
+    background: darken( $color , 12% );
+    position: absolute;
+    top: 0;
+    #{$left}: 0;
+    width: 100%;
+    height: 100%;
+    opacity: $opacity;
+    transition: $transition;
+    z-index: $z-index;
+  }
+}
+
+/*---------------------------------- border radius ----------------------------------*/
+@mixin border-radius($top-left: 5px, $top-right: 5px, $bottom-right: 5px, $bottom-left: 5px, $im: false) {
+  @if ( $im ) {
+    border-top-#{$left}-radius: $top-left !important;
+    border-top-#{$right}-radius: $top-right !important;
+    border-bottom-#{$right}-radius: $bottom-right !important;
+    border-bottom-#{$left}-radius: $bottom-left !important;
+  }
+  @else {
+    border-top-#{$left}-radius: $top-left;
+    border-top-#{$right}-radius: $top-right;
+    border-bottom-#{$right}-radius: $bottom-right;
+    border-bottom-#{$left}-radius: $bottom-left;
+  }
+}
+/*---------------------------------- line ----------------------------------*/
+@mixin line($width: 12px, $height: 13px, $line-border-radius: 3px, $color: $primary-color) {
+  position: relative;
+  padding-#{$right}: calc(#{$width} + 8px);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    #{$right}: 0;
+    transform: rotate(140deg);
+    width: $width;
+    height: $height;
+    border-radius: $line-border-radius;
+    background-color: $color;
+  }
+}
+
+/*---------------------------------- background image ----------------------------------*/
+@mixin backgroundImage($src, $repeat: no-repeat, $size: 500px, $position-x: center, $position-y: center, $attachment: inherit) {
+  background-image: url($src);
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position-x $position-y;
+  background-attachment: $attachment;
+}
+
+/*---------------------------------- scroll bar ----------------------------------*/
+@mixin scrollbar($main-width: 1.5, $thumb-width: 5px, $thumb-height: 2px, $color: $primary-color, $radius: $border-radius, $percent: 55%) {
+  &::-webkit-scrollbar {
+    width: $main-width;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: $radius;
+    width: $thumb-width;
+    height: $thumb-height;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: lighten($color, $percent);
+  }
+}
+
+/*---------------------------------- media query ----------------------------------*/
+@mixin media-lg {
+  @media only screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media only screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media only screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin media-xs {
+  @media only screen and (max-width: 575.98px) {
+    @content;
+  }
+}
+/*---------------------------------- flex ----------------------------------*/
+@mixin d-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+}
+
+@mixin flexrow-center {
+  @include d-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexcolumn-center {
+  @include d-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*---------------------------------- Second Language ----------------------------------*/
+$direction: rtl !default;
+@function flip($latin, $arabic) {
+  @return if($direction==rtl, #{$latin}, #{$arabic});
+}
+
+$left: flip(left, right);
+$right: flip(right, left);
+html[lang='en'] {
+  $latin: true;
+  $direction: ltr;
+}
+
+html[lang='fa'],
+html[lang='ar'] {
+  $arabic: true;
+  $direction: rtl;
+}

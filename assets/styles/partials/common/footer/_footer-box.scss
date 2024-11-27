@@ -1,0 +1,28 @@
+.footer-box {
+  position: relative;
+  
+  &__title {
+    color: $title-color;
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 10px;
+  } /* footer box title */
+  
+  // queries
+  @media only screen and (max-width: 991.98px) {
+    margin-bottom: 12px;
+  }
+  @media only screen and (max-width: 767.98px) {
+    margin-bottom: 15px;
+  }
+  @media only screen and (max-width: 575.98px) {
+    padding: 0 15px;
+    &.logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+  }
+} /* footer box */

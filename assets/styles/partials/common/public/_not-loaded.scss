@@ -1,0 +1,25 @@
+.not-loaded {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //border-radius: $border-radius;
+    background-color: lightgrey;
+    z-index: 5;
+    animation: skeleton-loading 1s linear infinite alternate;
+  } /* not loaded before */
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 93%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 100%);
+  }
+}

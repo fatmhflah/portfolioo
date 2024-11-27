@@ -1,0 +1,25 @@
+.footer-box__title اطلاعات تماس
+
+ul.footer-list
+
+    li.footer-list__item
+        a.footer-list__link.contact-link(href='#')
+            i.contact-icon.icon-map
+            span.contact-text= siteInfo.contact.address
+
+    li.footer-list__item
+        a.footer-list__link.contact-link(href=`tel:${siteInfo.contact.phone.replaceAll(" ", "").replaceAll("-", "")}`)
+            i.contact-icon.icon-phone
+            span.contact-text
+                bdi= siteInfo.contact.phone
+
+    li.footer-list__item
+        a.footer-list__link.contact-link(href=`tel:${siteInfo.contact.mobile.replaceAll(" ", "").replaceAll("-", "")}`)
+            i.contact-icon.icon-mobile
+            span.contact-text
+                bdi= siteInfo.contact.mobile
+
+    li.footer-list__item
+        a.footer-list__link.contact-link(href=`mailto:${siteInfo.contact.email}`)
+            i.contact-icon.icon-email
+            span.contact-text= siteInfo.contact.email

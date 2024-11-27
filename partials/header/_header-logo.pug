@@ -1,0 +1,7 @@
+a.header-logo(href='index.html')
+    img.lazyload(src='/assets/images/content/logo.webp' data-src='/assets/images/content/logo.webp' alt=siteInfo.title)
+
+    // this h1 tag must be span on the other pages
+    .header-logo__name
+        h1.title= siteInfo.title.replace('سایت ', '')
+        span.text=siteInfo.text

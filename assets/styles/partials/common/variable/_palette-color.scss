@@ -1,0 +1,11 @@
+$primary-color: #2c8e53;
+$primary-light-color: mix($light-color, $primary-color, 10%);
+$primary-dark-color: darken($primary-color, 10%);
+$primary-subtle-color: mix($light-color, $primary-color, 85%);
+
+$secondary-color: #db2d43;
+$secondary-light-color: mix($light-color, $secondary-color, 10%);
+$secondary-dark-color: darken($secondary-color, 10%);
+$secondary-subtle-color: mix($light-color, $secondary-color, 90%);
+
+

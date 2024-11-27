@@ -1,0 +1,15 @@
+$main-nav-z-index: 999;
+$main-nav-border-radius: $border-radius;
+$main-nav-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$main-nav-transition: $transition;
+$main-nav-transition-delay: 350ms;
+$main-nav-background: $light-color;
+$main-nav-wide-top: 70px;
+$main-nav-hide-transform: translateY(25px) scale(0.9);
+$main-nav-show-transform: translateY(0) scale(1);
+$main-nav-icon-size: 14px;
+$main-nav-link-color: mix($light-color, $title-color, 10%);
+$main-nav-active-link-color: $primary-color;
+$main-nav-link-size: 14px;
+$main-nav-link-weight: 500;
+$main-nav-link-active-weight: 600;

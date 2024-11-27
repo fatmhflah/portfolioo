@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0 maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="Designer_UI" content="Ali_God">
+    <!-- TODO: adding site custom favicon in this root-->
+    <link href="/assets/images/favicon/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="/assets/images/favicon/favicon-32x32.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="/assets/images/favicon/favicon-192x192.webp">
+    <link rel="icon" type="image/webp" sizes="16x16" href="/assets/images/favicon/favicon-16x16.webp">
+    <meta name="theme-color" content="#15348b">
+    <title>fafaweb</title><!-- public styles.-->
+    <link rel="stylesheet" href="assets/styles/common.css?v=1732653855979">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+    <link rel="stylesheet" href="assets/styles/css/swiper-bundle.min.css">
+    <!--link(rel="stylesheet" href="/assets/styles/common.min.css?v=" + new Date().getTime() )--><!-- index styles. -->
+    <link rel="stylesheet" href="/assets/styles/index.css?v=1732653855979">
+    <!--link(rel="stylesheet" href="/assets/styles/index.min.css?v=" + new Date().getTime() )-->
+    <script src="assets/scripts/js/jquery.min.js"></script>
+    <script src="assets/scripts/js/typed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="assets/scripts/js/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="cursor"><span></span></div>
+    <!--include partials/header/_header-->
+    <main>
+      <div class="page-wrapper">
+        <div class="blured-background"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="container">
+          <div class="index-page d-flex align-items-center">
+            <header id="main-header">
+              <div class="row align-items-center justify-content-between">
+                <div class="nav-toggle toggler d-lg-none"><span></span><span></span><span></span></div>
+                <nav class="main-navbar">
+                  <ul class="main-nav nav nav-tabs menu" id="menu-main-menu">
+                    <li class="nav-item main-nav__item menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-142 current_page_item" data-id=""><a class="nav-link main-nav__link one-page-menu-item active" data-bs-target="#about-me" data-bs-toggle="tab" href="#"><i class="icon icon-user-outline"></i><span class="name">درباره من</span></a></li>
+                    <!--li.nav-item(data-id="", class="main-nav__item menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-142 current_page_item")-->
+                    <!--    a.nav-link.main-nav__link.one-page-menu-item(data-bs-target="#resume" data-bs-toggle='tab' href='#')-->
+                    <!--        img.icon(src='assets/images/icon/resume.svg')-->
+                    <!--        span.name رزومه-->
+                    <li class="nav-item main-nav__item menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-142 current_page_item" data-id=""><a class="nav-link main-nav__link one-page-menu-item" data-bs-target="#projects" data-bs-toggle="tab" href="#"><i class="icon icon-projects"></i><span class="name">پروژه ها</span></a></li>
+                    <li class="nav-item main-nav__item menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-142 current_page_item" data-id=""><a class="nav-link main-nav__link one-page-menu-item" data-bs-target="#contact-me" data-bs-toggle="tab" href="#"><i class="icon icon-envelop"></i><span class="name">ارتباط با من</span></a></li>
+                    <li class="nav-item main-nav__item menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-142 current_page_item" data-id="">
+                      <button id="theme-toggle"><span class="theme-icon" id="moon-icon">🌙</span><span class="theme-icon" id="sun-icon">🌞</span></button>
+                      <!--span.light-icon(style="display:none;")
+                      //    svg(xmlns="http://www.w3.org/2000/svg", width="22.22", height="22.313", viewBox="0 0 22.22 22.313")
+                      //        path(id="Light_Theme", data-name="Light Theme", fill="#fff", d="M1752.49,105.511a5.589,5.589,0,0,0-3.94-1.655,5.466,5.466,0,0,0-3.94,1.655,5.61,5.61,0,0,0,3.94,9.566,5.473,5.473,0,0,0,3.94-1.653,5.643,5.643,0,0,0,1.65-3.957A5.516,5.516,0,0,0,1752.49,105.511Zm-1.06,6.85a4.1,4.1,0,0,1-5.76,0,4.164,4.164,0,0,1,0-5.788A4.083,4.083,0,0,1,1751.43,112.361Zm7.47-3.662h-2.27a0.768,0.768,0,0,0,0,1.536h2.27A0.768,0.768,0,0,0,1758.9,108.7Zm-10.35,8.12a0.777,0.777,0,0,0-.76.769v2.274a0.777,0.777,0,0,0,.76.767,0.786,0.786,0,0,0,.77-0.767v-2.274A0.786,0.786,0,0,0,1748.55,116.819Zm7.85-.531-1.62-1.624a0.745,0.745,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.625a0.747,0.747,0,0,0,1.06,0A0.759,0.759,0,0,0,1756.4,116.288ZM1748.55,98.3a0.777,0.777,0,0,0-.76.768v2.273a0.778,0.778,0,0,0,.76.768,0.787,0.787,0,0,0,.77-0.768V99.073A0.786,0.786,0,0,0,1748.55,98.3Zm7.88,3.278a0.744,0.744,0,0,0-1.06,0l-1.62,1.624a0.758,0.758,0,0,0,0,1.063,0.745,0.745,0,0,0,1.06,0l1.62-1.624A0.758,0.758,0,0,0,1756.43,101.583Zm-15.96,7.116h-2.26a0.78,0.78,0,0,0-.77.768,0.76,0.76,0,0,0,.77.768h2.26A0.768,0.768,0,0,0,1740.47,108.7Zm2.88,5.965a0.745,0.745,0,0,0-1.06,0l-1.62,1.624a0.759,0.759,0,0,0,0,1.064,0.747,0.747,0,0,0,1.06,0l1.62-1.625A0.758,0.758,0,0,0,1743.35,114.664Zm0-11.457-1.62-1.624a0.744,0.744,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.624a0.745,0.745,0,0,0,1.06,0A0.758,0.758,0,0,0,1743.35,103.207Z", transform="translate(-1737.44 -98.313)")
+                      //span.dark-icon
+                      //    svg(xmlns="http://www.w3.org/2000/svg", width="23", height="23", viewBox="0 0 23 23")
+                      //        path(id="Dark_Theme", data-name="Dark Theme", fill="#fff", d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z", transform="translate(-1737 -98)")
+                      //
+                      -->
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </header>
+            <div class="main-content d-flex gap-3">
+              <div class="profile">
+                <div class="profile-content">
+                  <div class="slide-img">
+                    <div class="swiper-container">
+                      <!-- Additional required wrapper-->
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide slide-2">
+                          <picture><img src="assets/images/slider/slide-3.jpg" data-src="assets/images/slider/slide-3.jpg"></picture>
+                        </div>
+                        <div class="swiper-slide slide-1">
+                          <picture><img src="assets/images/slider/slide-8.jpg" data-src="assets/images/slider/slide-8.jpg"></picture>
+                        </div>
+                        <div class="swiper-slide slide-2">
+                          <picture><img src="assets/images/slider/slide-9.jpg" data-src="assets/images/slider/slide-9.jpg"></picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image"><a href=""><img src="assets/images/background/avatar1.webp" alt="فاطمه فلاح"></a></div>
+                  <div class="title">فاطمه فلاح</div>
+                  <div class="subtitle subtitle-typed"><span class="typing-title" data-typed-items="developer , برنامه نویس Front-End, فریلنسر,  ui ux"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span></div>
+                  <div class="social-list"><a><i class="icon icon-telegram"></i></a><a><i class="icon icon-whatsapp"></i></a><a><i class="icon icon-instagram"></i></a></div>
+                </div>
+                <script>
+                  var mySwiper = new Swiper('.swiper-container', {
+                      loop: true,
+                      spaceBetween: 50,
+                      speed: 1000,
+                      effect: 'fade',
+                      navigation: {
+                          nextEl: '.swiper-button-next',
+                          prevEl: '.swiper-button-prev',
+                      },
+                      autoplay: {
+                          delay: 5000,
+                          disableOnInteraction: false,
+                      }
+                  })
+                </script>
+              </div>
+              <div class="tab-content">
+                <div class="active tab-pane Shared-card fade" id="about-me">
+                  <h2 class="title">درباره من</h2>
+                  <div class="description"> سلام! من فاطمه فلاح هستم، ۲۴ ساله و عاشق دنیای تکنولوژی. با بیش از ۳ سال تجربه در طراحی سایت، مهارتم رو در ایجاد وبسایت‌های زیبا و کارآمد به نمایش گذاشتم. یادگیری برای من فقط یک هدف نیست؛ بلکه یک سبک زندگیه! هر روز با اشتیاق به دنبال کشف چیزای جدید و توسعه توانایی‌هام هستم.</div>
+                  <ul class="info-list">
+                    <li class="info-item">
+                      <div class="key">سن :</div>
+                      <div class="value">24</div>
+                    </li>
+                    <li class="info-item">
+                      <div class="key">محل سکونت :</div>
+                      <div class="value">کاشان</div>
+                    </li>
+                    <li class="info-item">
+                      <div class="key">تخصص :</div>
+                      <div class="value">برنامه نویس وب</div>
+                    </li>
+                  </ul>
+                  <div class="shared-card" id="services">
+                    <div class="title">خدمات من</div>
+                    <div class="row mt-5">
+                      <div class="col-lg-4">
+                        <div class="service-card"><img class="icon" src="assets/images/icon/ui-design.png">
+                          <div class="name">Ui - Ux</div>
+                          <div class="desc">تجزیه و تحلیل و طراحی انواع قالب های انحصاری</div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="service-card"><img class="icon" src="assets/images/icon/backend.png">
+                          <div class="name">Web development</div>
+                          <div class="desc">توسعه وب سایت و اپلیکیشن های تحت وب</div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="service-card"><img class="icon" src="assets/images/icon/customer-service (2).png">
+                          <div class="name">Support</div>
+                          <div class="desc">6 ماه پشتیبانی رایگان برای تمامی پروژه ها</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shared-card tab-pane fade" id="projects">
+                  <h2 class="title">پروژه ها</h2>
+                  <div class="gallery-container">
+                    <!-- پروژه ۱-->
+                    <div class="project"><a href="assets/images/gallery/06.png" data-fancybox="project1" data-caption="تصویر اصلی پروژه شهدخت"><img src="assets/images/gallery/06.png" alt="تصویر اصلی پروژه شهدخت"></a>
+                      <h3> فرش شهدخت</h3><a href="assets/images/gallery/shahdokht2.png" data-fancybox="project1" data-caption="تصویر ۲ پروژه شهدخت" style="display: none;"></a><a href="assets/images/gallery/shahdokht3.jpg" data-fancybox="project1" data-caption="تصویر ۳ پروژه شهدخت" style="display: none;"></a>
+                    </div>
+                    <!-- پروژه ۲-->
+                    <div class="project"><a href="assets/images/gallery/sandogh1.jpg" data-fancybox="project3" data-caption="تصویر اصلی پروژه صندوق اندوخته خانوادگی"><img src="assets/images/gallery/sandogh1.jpg" alt="تصویر اصلی پروژه صندوق اندوخته خانوادگی"></a>
+                      <h3> صندوق اندوخته خانوادگی</h3><a href="assets/images/gallery/sandogh6.png" data-fancybox="project3" data-caption="تصویر ۲ پروژه صندوق اندوخته خانوادگی" style="display: none;"></a><a href="assets/images/gallery/sandogh1.png" data-fancybox="project3" data-caption="تصویر ۳ پروژه صندوق اندوخته خانوادگی" style="display: none;"></a><a href="assets/images/gallery/sandogh2.png" data-fancybox="project3" data-caption="تصویر 4 پروژه صندوق اندوخته خانوادگی" style="display: none;"></a><a href="assets/images/gallery/sandogh3.png" data-fancybox="project3" data-caption="تصویر 5 پروژه صندوق اندوخته خانوادگی" style="display: none;"></a><a href="assets/images/gallery/sandogh4.png" data-fancybox="project3" data-caption="تصویر 6 پروژه صندوق اندوخته خانوادگی" style="display: none;"></a>
+                    </div>
+                    <div class="project"><a href="assets/images/gallery/terme1.jpg" data-fancybox="project4" data-caption="تصویر اصلی پروژه طراحی فرش ترمه "><img src="assets/images/gallery/terme1.jpg" alt="تصویر اصلی پروژه طراحی فرش ترمه"></a>
+                      <h3> فرش ترمه</h3><a href="assets/images/gallery/terme2.png" data-fancybox="project4" data-caption="تصویر 2 پروژه فرش ترمه " style="display: none;"></a>
+                    </div>
+                    <div class="project"><a href="assets/images/gallery/corex1.jpg" data-fancybox="project5" data-caption="تصویر اصلی پروژه corex "><img src="assets/images/gallery/corex1.jpg" alt="تصویر اصلی پروژه Corex"></a>
+                      <h3> Corex</h3><a href="assets/images/gallery/corex1.png" data-fancybox="project5" data-caption="تصویر ۲ پروژه Corex " style="display: none;"></a><a href="assets/images/gallery/corex2.png" data-fancybox="project5" data-caption="تصویر ۳  پروژه Corex " style="display: none;"></a><a href="assets/images/gallery/corex3.png" data-fancybox="project5" data-caption="تصویر 4  پروژه Corex " style="display: none;"></a>
+                    </div>
+                    <div class="project"><a href="assets/images/gallery/taak1.png" data-fancybox="project6" data-caption="تصویر اصلی پروژه کتاب تاک "><img src="assets/images/gallery/taak1.png" alt="تصویر اصلی پروژه کتاب تاک"></a>
+                      <h3> کتاب تاک</h3><a href="assets/images/gallery/taak2.png" data-fancybox="project6" data-caption="تصویر ۲ پروژه کتاب تاک  " style="display: none;"></a><a href="assets/images/gallery/taak3" data-fancybox="project6" data-caption="تصویر ۳  پروژه کتاب تاک  " style="display: none;"></a><a href="assets/images/gallery/taak4.png" data-fancybox="project6" data-caption="تصویر 4  پروژه کتاب تاک " style="display: none;"></a>
+                    </div>
+                    <div class="project"><a href="assets/images/gallery/youtab3.png" data-fancybox="project7" data-caption="تصویر اصلی پروژه یوتاب "><img src="assets/images/gallery/youtab3.png" alt="تصویر اصلی پروژه یوتاب"></a>
+                      <h3> یوتاب</h3><a href="assets/images/gallery/youtab1.png" data-fancybox="project7" data-caption="تصویر ۲ پروژه یوتاب  " style="display: none;"></a><a href="assets/images/gallery/youtab2.png" data-fancybox="project7" data-caption="تصویر ۲ پروژه یوتاب  " style="display: none;"></a><a href="assets/images/gallery/youtab4.png" data-fancybox="project7" data-caption="تصویر 4  پروژه یوتاب " style="display: none;"></a><a href="assets/images/gallery/youtab5.png" data-fancybox="project7" data-caption="تصویر 4  پروژه یوتاب " style="display: none;"></a>
+                    </div>
+                    <div class="project"><a href="assets/images/gallery/aftab1.jpg" data-fancybox="project8" data-caption="تصویر اصلی پروژه طراحی فرش خانه آفتاب "><img src="assets/images/gallery/aftab1.jpg" alt="تصویر اصلی پروژه طراحی فرش خانه آفتاب"></a>
+                      <h3> طراحی فرش خانه آفتاب</h3><a href="assets/images/gallery/aftab2.png" data-fancybox="project8" data-caption="تصویر ۲ پروژه طراحی فرش خانه آفتاب  " style="display: none;"></a>
+                    </div>
+                    <div class="project"><a href="assets/images/gallery/sobar1.jpg" data-fancybox="project9" data-caption="تصویر اصلی پروژه طراحی فرش سوبار "><img src="assets/images/gallery/sobar1.jpg" alt="تصویر اصلی پروژه طراحی فرش سوبار"></a>
+                      <h3> فرش سوبار</h3><a href="assets/images/gallery/sobar2.png" data-fancybox="project9" data-caption="تصویر 2 پروژه فرش سوبار    " style="display: none;"></a><a href="assets/images/gallery/sobar3.jpg" data-fancybox="project9" data-caption="تصویر 3  پروژه طراحی فرش سوبار " style="display: none;"></a>
+                    </div>
+                    <div class="project"><a href="assets/images/gallery/avadis1.jpg" data-fancybox="project10" data-caption="تصویر اصلی پروژه کاشی و سرامیک آوادیس "><img src="assets/images/gallery/avadis1.jpg" alt="تصویر اصلی پروژه کاشی و سرامیک آوادیس"></a>
+                      <h3> کاشی و سرامیک آوادیس</h3><a href="assets/images/gallery/avadis2.png" data-fancybox="project10" data-caption="تصویر 2 پروژه کاشی و سرامیک آوادیس    " style="display: none;"></a><a href="assets/images/gallery/avadis3.jpg" data-fancybox="project10" data-caption="تصویر 3  پروژه کاشی و سرامیک آوادیس " style="display: none;"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="shared-card tab-pane fade" id="contact-me">
+                  <div class="title">با من در ارتباط باشید</div>
+                  <div class="mapouter mt-5">
+                    <div class="gmap_canvas">
+                      <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=650&amp;amp;height=250&amp;amp;hl=en&amp;amp;q=kashan&amp;amp;t=&amp;amp;z=17&amp;amp;ie=UTF8&amp;amp;iwloc=B&amp;amp;output=embed"></iframe><a href="https://sprunkin.com/">Sprunki Incredibox</a>
+                    </div>
+                    <style>
+                      .mapouter {
+                          position: relative;
+                          text-align: right;
+                          width: 100%;
+                          height: 250px;
+                      }
+                      
+                      .gmap_canvas {
+                          overflow: hidden;
+                          background: none !important;
+                          width: 100%;
+                          height: 250px;
+                      }
+                      
+                      .gmap_iframe {
+                          width:  100%!important;
+                          height: 250px !important;
+                      }
+                      
+                    </style>
+                  </div>
+                  <ul class="info-list">
+                    <li class="info-item"><img src="assets/images/icon/map.svg">
+                      <!--.key آدرس :-->
+                      <div class="value">اصفهان کاشان</div>
+                    </li>
+                    <li class="info-item"><img src="assets/images/icon/email.svg">
+                      <!--.key ایمیل :--><a class="value" href="mailto:shrflah96@gmail.com">shrflah96@gmail.com</a>
+                    </li>
+                    <li class="info-item"><img src="assets/images/icon/phone.svg">
+                      <!--.key تلفن :--><a class="value" href="tel:09130130655">09130130655</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="search-focus" id="search-modal">
+      <div class="search-popup">
+        <div class="close-layer close-item"></div>
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <button class="close close-item"><span aria-hidden="true">×</span></button>
+            <div class="search-center">
+              <p class="search-txt">جستجو</p>
+              <form class="search-form">
+                <input class="search-index search-input" type="search" placeholder="دنبال چی می گردی ...">
+                <button class="search-button" type="submit"><span class="icon-search"></span></button>
+              </form>
+              <div class="search-suggest-wrapper"><a class="search-suggest" href="#">لیوان</a><a class="search-suggest" href="#">قاشق</a><a class="search-suggest" href="#">چنگال</a><a class="search-suggest" href="#">کاسه</a><a class="search-suggest" href="#">ظرف در دار</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--include partials/footer/_footer--><!-- public scripts.-->
+    <!-- TODO: install node_modules dependencies and put common.js insted of this files-->
+    <script src="/assets/scripts/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/scripts/js/validate.min.js"></script>
+    <script src="/assets/scripts/js/lazysizes.min.js"></script>
+    <script src="/assets/scripts/js/sweetAlert2.min.js"></script><!-- index scripts. -->
+    <script type="module" src="assets/scripts/main.js?v=1732653855979"></script>
+  </body>
+</html>

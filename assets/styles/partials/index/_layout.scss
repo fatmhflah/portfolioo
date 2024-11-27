@@ -1,0 +1,14 @@
+/*------------------------------------ main slider ------------------------------------*/
+.mainSlider:not(.owl-loaded) {
+  display: block !important;
+  aspect-ratio: 16/7;
+  overflow: hidden;
+}
+
+.mainSlider:not(.owl-loaded) .owl-item:not(:first-child) {
+  display: none;
+}
+
+.mainSlider:not(.owl-loaded) .owl-item img {
+  height: 100%;
+}

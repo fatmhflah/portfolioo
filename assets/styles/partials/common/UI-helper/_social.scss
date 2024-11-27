@@ -1,0 +1,123 @@
+.nav-social {
+  margin: 15px 0;
+  margin-bottom: 5px;
+  
+  &__item {
+    margin-#{$left}: 20px;
+    margin-bottom: 10px;
+  }
+  
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: $border-radius;
+    transition: $transition;
+    
+    .social-icon {
+      font-size: 30px;
+      color: $dark-color;
+      transition: $transition;
+    }
+    
+    .social-icon.whatsapp {
+      color: $whatsapp;
+    }
+    .social-icon.telegram {
+      color: $telegram;
+    }
+    .social-icon.instagram {
+      @include textGradiant($instagram)
+    }
+    .social-icon.pinterest {
+      color: $pinterest;
+    }
+    .social-icon.facebook {
+      color: $facebook;
+    }
+    .social-icon.x {
+      color: $x;
+    }
+    .social-icon.youtube {
+      color: $youtube;
+    }
+    .social-icon.linkedin {
+      color: $linkedin;
+    }
+    .social-icon.google-plus {
+      color: $google-plus;
+    }
+    .social-icon.skype {
+      color: $skype;
+    }
+    .social-icon.nova {
+      color: $nova;
+    }
+    .social-icon.eitaa {
+      color: $eitaa;
+    }
+    .social-icon.igap {
+      color: $igap;
+    }
+    .social-icon.gap {
+      color: $gap;
+    }
+    .social-icon.soroush {
+      color: $soroush;
+    }
+    .social-icon.bale {
+      @include textGradiant($bale)
+    }
+  }
+}
+
+.social-media__icon.whatsapp {
+  color: $whatsapp;
+}
+.social-media__icon.telegram {
+  color: $telegram;
+}
+.social-media__icon.instagram {
+  @include textGradiant($instagram)
+}
+.social-media__icon.pinterest {
+  color: $pinterest;
+}
+.social-media__icon.facebook {
+  color: $facebook;
+}
+.social-media__icon.x {
+  color: $x;
+}
+.social-media__icon.youtube {
+  color: $youtube;
+}
+.social-media__icon.linkedin {
+  color: $linkedin;
+}
+.social-media__icon.google-plus {
+  color: $google-plus;
+}
+.social-media__icon.skype {
+  color: $skype;
+}
+.social-media__icon.nova {
+  color: $nova;
+}
+.social-media__icon.eitaa {
+  color: $eitaa;
+}
+.social-media__icon.igap {
+  color: $igap;
+}
+.social-media__icon.gap {
+  color: $gap;
+}
+.social-media__icon.soroush {
+  color: $soroush;
+}
+.social-media__icon.bale {
+  @include textGradiant($bale)
+}

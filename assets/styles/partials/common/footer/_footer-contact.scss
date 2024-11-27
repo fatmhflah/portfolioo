@@ -1,0 +1,27 @@
+.footer-box.footer-contact {
+  
+  .footer-list {
+    padding-left: 15px;
+  } /* footer box contact footer list */
+  
+  .contact-link {
+    display: flex;
+    align-items: inherit;
+    justify-content: flex-start;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    
+    .contact-text {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    } /* contact link contact text */
+  } /* footer box contact contact link */
+  
+  .contact-icon {
+    align-self: flex-start;
+    margin-top: 2px;
+    margin-#{$left}: 5px;
+    color: $sub-text-color;
+  } /* footer box contact contact icon */
+} /* footer contact */

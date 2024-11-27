@@ -1,0 +1,50 @@
+.profile
+    .profile-content
+        .slide-img
+            .swiper-container
+                // Additional required wrapper
+                .swiper-wrapper
+
+                    .swiper-slide.slide-2
+                        picture
+                            img(src="assets/images/slider/slide-3.jpg" data-src="assets/images/slider/slide-3.jpg")
+
+                    .swiper-slide.slide-1
+                        picture
+                            img(src="assets/images/slider/slide-8.jpg" data-src="assets/images/slider/slide-8.jpg")
+
+                    .swiper-slide.slide-2
+                        picture
+                            img(src="assets/images/slider/slide-9.jpg" data-src="assets/images/slider/slide-9.jpg")
+
+        .image
+            a(href="")
+                img(src="assets/images/background/avatar1.webp" alt="فاطمه فلاح")
+        .title فاطمه فلاح
+        .subtitle.subtitle-typed
+            span.typing-title(data-typed-items="developer , برنامه نویس Front-End, فریلنسر,  ui ux")
+            span.typed-cursor.typed-cursor--blink(aria-hidden="true") |
+        .social-list
+            a
+                i.icon.icon-telegram
+            a
+                i.icon.icon-whatsapp
+            a
+                i.icon.icon-instagram
+
+    block script
+        script.
+            var mySwiper = new Swiper('.swiper-container', {
+                loop: true,
+                spaceBetween: 50,
+                speed: 1000,
+                effect: 'fade',
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }
+            })

@@ -1,0 +1,55 @@
+$alert-border-radius: 6px;
+
+.alert-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: mix($dark-color, $light-color, 3%);
+  color: $text-color;
+  border-right: 2px solid mix($dark-color, $light-color, 50%);
+  border-radius: $alert-border-radius;
+  padding: 10px 15px;
+  //height: 100%;
+  
+  &__icon {
+    font-size: 18px;
+    padding-left: 10px;
+  } /* alert box icon */
+  
+  &__text {
+    font-size: 13px;
+    line-height: 20px;
+    
+    &.one-line {
+      @include lineText(1);
+    }
+  } /* alert box text */
+  
+  &.success {
+    border-right: 2px solid $success-color;
+    background-color: $success-subtle-color;
+    color: $success-color;
+  } /* alert box success */
+  
+  &.danger {
+    border-right: 2px solid $error-color;
+    background-color: $error-subtle-color;
+    color: $error-color;
+  } /* alert box danger */
+  
+  &.warning {
+    border-right: 2px solid $warning-color;
+    background-color: $warning-subtle-color;
+    color: $warning-color;
+  } /* alert box warning */
+  
+  &.info {
+    border-right: 2px solid $edit-color;
+    background-color: $info-subtle-color;
+    color: $edit-color;
+  } /* alert box info */
+  
+  &.border-0 {
+    border: 0 !important;
+  }
+} /* alert box */

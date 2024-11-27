@@ -1,0 +1,40 @@
+#contact-me.shared-card.tab-pane.fade
+    .title با من در ارتباط باشید
+    .mapouter.mt-5
+        div(class="gmap_canvas")
+            iframe(class="gmap_iframe", frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://maps.google.com/maps?width=650&amp;height=250&amp;hl=en&amp;q=kashan&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed")
+            a(href="https://sprunkin.com/") Sprunki Incredibox
+        style.
+            .mapouter {
+                position: relative;
+                text-align: right;
+                width: 100%;
+                height: 250px;
+            }
+
+            .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                width: 100%;
+                height: 250px;
+            }
+
+            .gmap_iframe {
+                width:  100%!important;
+                height: 250px !important;
+            }
+
+    ul.info-list
+        li.info-item
+            img(src='assets/images/icon/map.svg')
+            //.key آدرس :
+            .value اصفهان کاشان
+
+        li.info-item
+            img(src='assets/images/icon/email.svg')
+            //.key ایمیل :
+            a.value(href='mailto:shrflah96@gmail.com') shrflah96@gmail.com
+        li.info-item
+            img(src='assets/images/icon/phone.svg')
+            //.key تلفن :
+            a.value(href='tel:09130130655') 09130130655

@@ -1,0 +1,28 @@
+.titles {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: justify;
+  line-height: 2;
+  width: 100%;
+  //color: darken( $main-background , 35% );
+  color: $primary-color;
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  color: #585858;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 500;
+}
+/*-------------------------------------- title and sub title --------------------------------------*/
+.page-item {
+  border-radius: 16px;
+  background: #fff;
+  text-align: justify;
+  margin-top: 0;
+  -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+  margin-bottom: 45px;
+  padding: 30px;
+}

@@ -1,0 +1,21 @@
+$success-color: #388e3c;
+$success-subtle-color: mix($light-color, $success-color, 92.5%);
+
+$error-color: #f31313;
+$error-subtle-color: mix($light-color, $error-color, 93.5%);
+
+$info-color: #3B9AE1;
+$info-subtle-color: mix($light-color, $info-color, 92%);
+
+$edit-color: #1870ce;
+$edit-subtle-color: mix($light-color, $edit-color, 90%);
+
+$buy-color: #3CCF4E;
+$buy-subtle-color: mix($light-color, $buy-color, 90%);
+
+$warning-color: #FFB200;
+$warning-subtle-color: mix($light-color, $warning-color, 92%);
+
+$object-color: #8d9aa8;
+
+$disabled-color: #e9e9e9;

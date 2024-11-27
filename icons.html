@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0 maximum-scale=1.0,minimum-scale=1.0">
+    <title>سایت شروع پروژه فارسی ( آیتیسا )</title>
+    <meta name="Designer_UI" content="Ali_God">
+    <link href="dist/images/favicon/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="/assets/images/favicon/favicon-32x32.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="/assets/images/favicon/favicon-192x192.webp">
+    <link rel="icon" type="image/webp" sizes="16x16" href="/assets/images/favicon/favicon-16x16.webp">
+    <meta name="theme-color" content="#15348b">
+    <link rel="stylesheet" href="/assets/styles/common.css?v=1729340156628">
+    <!--link(rel="stylesheet" href="/assets/styles/common.min.css?v=" + new Date().getTime() )-->
+    <style>
+      #icons {
+          margin: 50px 0;
+      }
+      
+      .wrapper-icon {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row-reverse;
+          gap: 5px;
+          border-radius: 10px;
+          background-color: white;
+          font-size: 20px;
+          font-weight: 800;
+          box-shadow: none;
+          transition: all 350ms linear;
+          cursor: pointer;
+          overflow: hidden;
+      }
+      
+      .wrapper-icon::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          transition: all 350ms linear;
+          z-index: 2;
+      }
+      
+      .wrapper-icon::after {
+          content: "آیکون مد نظر با موفقیت کپی شد";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(1.2);
+          text-align: center;
+          font-size: 16px;
+          font-weight: 800;
+          color: #2ef400;
+          transition: all 350ms linear;
+          opacity: 0;
+          pointer-events: none;
+          z-index: 2;
+      }
+      
+      .wrapper-icon.active::before {
+          left: 0;
+      }
+      
+      .wrapper-icon.active::after {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+      }
+      
+      .wrapper-icon:hover {
+          background-color: #f1f1f1;
+          box-shadow: 0 2px 8px #00000020;
+      }
+      .wrapper-icon:hover [class^='icon-'] {
+          transform: scale(1.2);
+      }
+      
+      .wrapper-icon * {
+          padding: 20px;
+      }
+      
+      .wrapper-icon span {
+          font-family: cursive;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+      
+      .wrapper-icon [class^="icon-"] {
+          font-size: 25px;
+          font-weight: normal;
+          margin-left: auto;
+          border-left: 1px solid #f1f1f1;
+          transition: all 350ms linear;
+      }
+      
+      .search-wrapper {
+          text-align: center;
+          margin-top: 20px;
+      }
+      
+      .search-wrapper label {
+          font-size: 16px;
+          font-weight: 800;
+          color: #333;
+          margin-left: 10px;
+      }
+      
+      .search-wrapper #icon-search {
+          outline: none !important;
+          display: inline-block;
+          min-width: 350px;
+          border: 1px solid #d6d6d6;
+          box-shadow: none;
+          color: #333;
+          background-color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+          padding: 15px;
+          border-radius: 10px;
+          transition: all 350ms linear;
+      }
+      
+      .search-wrapper #icon-search::placeholder {
+          font-size: 14px;
+          font-weight: 400;
+          color: #555;
+      }
+      
+      .search-wrapper #icon-search:focus,
+      .search-wrapper #icon-search:hover {
+          box-shadow: 0 0 2px 0 #000000;
+      }
+      
+      .not-found {
+          width: 100%;
+          padding: 20px;
+          border-radius: 10px;
+          background-color: #ffefef;
+          box-shadow: 0 2px 8px #00000035;
+          border-right: 4.5px solid #ff4141;
+          display: none;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 20px;
+      }
+      
+      .not-found.active {
+          display: flex;
+      }
+      
+      .not-found [class^='icon-'] {
+          font-size: 35px;
+          color: #ff4141;
+      }
+      
+      .not-found span {
+          font-size: 20px;
+          font-weight: 750;
+          color: #ff4141;
+      }
+      
+      .not-found__result {
+          color: #333 !important;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="nav-toggle toggler d-lg-none"><span></span><span></span><span></span></div>
+          <div class="col-lg-auto"><a class="header-logo" href="index.html"><img class="lazyload" src="/assets/images/content/logo.webp" data-src="/assets/images/content/logo.webp" alt="سایت شروع پروژه فارسی ( آیتیسا )">
+              <!-- this h1 tag must be span on the other pages-->
+              <div class="header-logo__name">
+                <h1 class="title">شروع پروژه فارسی ( آیتیسا )</h1><span class="text">شرکت فناوری اطلاعات آیتیسا</span>
+              </div></a></div>
+          <div class="col-lg-auto">
+            <nav class="main-navbar">
+              <div class="navbar-overlay"></div>
+              <ul class="main-nav nav">
+                <li class="main-nav__item d-lg-none"><a class="main-nav__link logo" href="index.html"><img src="/assets/images/content/logo.webp" alt="سایت شروع پروژه فارسی ( آیتیسا )"></a></li>
+                <li class="main-nav__item"><a class="main-nav__link active" href="index.html"><span>خانه</span></a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#"><i class="icon-calendar main-nav__link__icon"></i><span>محصولات</span></a>
+                  <!--.sub-nav-wrapper.wide-sm-->
+                  <!--.sub-nav-wrapper.wide-md-->
+                  <!--.sub-nav-wrapper.wide-lg-->
+                  <div class="sub-nav-wrapper">
+                    <ul class="sub-nav nav">
+                      <li><a class="sub-nav__link" href="product-archive.html"><span>محصول شماره یک</span></a></li>
+                      <li><a class="sub-nav__link" href="product-archive.html"><span>محصول شماره دو</span></a></li>
+                      <li><a class="sub-nav__link" href="product-archive.html"><span>محصول شماره سه</span></a></li>
+                      <li><a class="sub-nav__link" href="product-archive.html"><span>محصول شماره چهار</span></a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="blog-archive.html"><span>وبلاگ</span></a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="about-us.html"><span>درباره ما</span></a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="contact-us.html"><span>تماس با ما</span></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-auto">
+            <div class="header-box">
+              <button class="search-button-item"><span class="main-btn__icon icon-search"></span></button>
+            </div>
+          </div>
+        </div>
+        <!-- main header wrapper-->
+      </div>
+      <!-- container-->
+    </header>
+    <!-- main header-->
+    <main>
+      <div class="search-wrapper">
+        <label for="icon-search">جست و جوی آیکون :</label>
+        <input id="icon-search" type="text" placeholder="آیکون مورد نظر خود را جست و جو کنید...">
+      </div>
+      <section id="icons">
+        <div class="container">
+          <div class="row g-4"></div>
+        </div>
+      </section>
+    </main>
+    <footer id="main-footer">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 footer-box footer-logo"><a class="footer-logo__logo" href="index.html"><img class="lazyload" src="/assets/images/content/logo.webp" data-src="/assets/images/content/logo.webp" alt="سایت شروع پروژه فارسی ( آیتیسا )">
+              <div class="footer-logo__name"><span class="title">شروع پروژه فارسی ( آیتیسا )</span><span class="text">شرکت فناوری اطلاعات آیتیسا</span></div></a>
+            <div class="social__social">
+              <ul class="nav nav-social">
+                <li class="nav-social__item"><a class="nav-social__link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="اینستاگرام"><i class="social-icon icon-instagram"></i></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="فیس بوک"><i class="social-icon icon-facebook"></i></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="تلگرام"><i class="social-icon icon-telegram"></i></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="واتس اپ"><i class="social-icon icon-whatsapp"></i></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="لینکدین"><i class="social-icon icon-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 footer-box footer-easyaccess">
+            <div class="footer-box__title">دسترسی آسان</div>
+            <div class="footer-box__body">
+              <ul class="footer-list link">
+                <li class="footer-list__item"><a class="footer-list__link" href="product-archive.html">محصولات</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="blog-archive.html">مقالات</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="about-us.html">درباره ما</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="contact-us.html">تماس با ما</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-5 footer-box footer-contact">
+            <div class="footer-box__title">اطلاعات تماس</div>
+            <ul class="footer-list">
+              <li class="footer-list__item"><a class="footer-list__link contact-link" href="#"><i class="contact-icon icon-map"></i><span class="contact-text">کاشان، میدان امام حسین، ابتدای خیابان ملامحسن، مرکز طراحی سایت کاشان - فناوری اطلاعات آیتیسا</span></a></li>
+              <li class="footer-list__item"><a class="footer-list__link contact-link" href="tel:031555515555"><i class="contact-icon icon-phone"></i><span class="contact-text">
+                    <bdi>031-555515555</bdi></span></a></li>
+              <li class="footer-list__item"><a class="footer-list__link contact-link" href="tel:091311122222"><i class="contact-icon icon-mobile"></i><span class="contact-text">
+                    <bdi>0913 111 22222</bdi></span></a></li>
+              <li class="footer-list__item"><a class="footer-list__link contact-link" href="mailto:info@itsaco.com"><i class="contact-icon icon-email"></i><span class="contact-text">info@itsaco.com</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="footer-info">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-info__box"><span>
+                تمامی حقوق این وبسایت متعلق به سایت
+                </span><a href="index.html">شروع پروژه فارسی ( آیتیسا )</a><span>
+                
+                می باشد</span></div>
+            <div class="col-md-6 footer-info__box"><a class="footer-info__itsa" href="https://www.itsaco.ir/" target="_blank" rel="noopener"><img class="lazyload blur-up footer-info__itsa-img" src="/assets/images/content/itsa-logo.webp" data-src="/assets/images/content/itsa-logo.webp" alt="لوگوی سایت فناوی اطلاعات آیتیسا">
+                <div class="footer-info__itsa-text"><span class="title">طراحی و توسعه :</span><span>فناوری اطلاعات آیتیسا</span></div></a>
+              <!--h6
+              |  طراحی و توسعه :
+              a(href='https://www.itsaco.ir/', target='_blank', rel='noopener')  فناوری اطلاعات آیتیسا
+              -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <button id="scroll-up">scroll-up<span class="icon-circle-angle-up"></span></button>
+    <script src="/assets/scripts/js/jquery.min.js"></script>
+    <script type="module" src="/assets/scripts/icons.js"></script>
+  </body>
+</html>

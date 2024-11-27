@@ -1,0 +1,15 @@
+a.footer-logo__logo(href='index.html')
+    img.lazyload(src='/assets/images/content/logo.webp' data-src='/assets/images/content/logo.webp' alt=siteInfo.title)
+
+    .footer-logo__name
+        span.title= siteInfo.title.replace('سایت ', '')
+        span.text= siteInfo.text
+
+.social__social
+    ul.nav.nav-social
+
+        each item in socialIconInfo
+
+            li.nav-social__item
+                a.nav-social__link(href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=item.title)
+                    i.social-icon(class=`icon-${item.icon}`)

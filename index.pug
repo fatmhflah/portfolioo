@@ -1,0 +1,49 @@
+extends partials/_layout
+
+block style
+   <!-- index styles. -->
+    link(rel="stylesheet" href="/assets/styles/index.css?v=" + new Date().getTime() )
+    //link(rel="stylesheet" href="/assets/styles/index.min.css?v=" + new Date().getTime() )
+
+block header
+    //include partials/header/_header
+
+block content
+    .page-wrapper
+        .blured-background
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .container
+            .index-page.d-flex.align-items-center
+                include partials/header/_header
+                .main-content.d-flex.gap-3
+                    include partials/index/_profile
+                    .tab-content
+                            include partials/index/_about-me
+                            include partials/index/_projects
+                            include partials/index/_contact-me
+block footer
+    //include partials/footer/_footer
+
+block script
+    <!-- index scripts. -->
+
+

@@ -1,0 +1,20 @@
+section.footer-info
+    .container
+        .row
+            .col-md-6.footer-info__box
+                span
+                    |تمامی حقوق این وبسایت متعلق به سایت
+                    |
+                a(href="index.html")= siteInfo.title.replace('سایت ', '')
+                span
+                    |
+                    |می باشد
+            .col-md-6.footer-info__box
+                a.footer-info__itsa(href='https://www.itsaco.ir/', target='_blank', rel='noopener')
+                    img.lazyload.blur-up.footer-info__itsa-img(src="/assets/images/content/itsa-logo.webp" data-src="/assets/images/content/itsa-logo.webp" alt="لوگوی سایت فناوی اطلاعات آیتیسا")
+                    .footer-info__itsa-text
+                        span.title طراحی و توسعه :
+                        span فناوری اطلاعات آیتیسا
+                //h6
+                    |  طراحی و توسعه :
+                    a(href='https://www.itsaco.ir/', target='_blank', rel='noopener')  فناوری اطلاعات آیتیسا

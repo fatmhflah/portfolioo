@@ -1,0 +1,219 @@
+@import "checkbox";
+
+// form
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-card {
+    padding-bottom: 15px;
+    &__field {
+        position: relative;
+        margin: 0 0 25px 0;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        padding: flip( 2px 10px 2px 5px, 2px 5px 2px 10px);
+        font-size: 14px;
+        color: $title-color;
+        height: calc(2.55rem + 3px);
+        border: 1.5px solid #bcbdc09c;
+        transition: $transition;
+        box-shadow: none;
+        @include border-radius(5px);
+        &::placeholder {
+            font-size: 12px;
+            color: $text-color;
+        } /*  placeholder */
+        &:focus~label,
+        &:valid~label {
+            top: -11px;
+            font-size: 12px;
+            color: #9c9c9c;
+            background: #fbfbfb;
+            padding: 0 9px;
+            line-height: 1;
+            margin-bottom: 0;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            box-shadow: 0 0 4px rgb(204, 204, 204)
+        }
+    }
+    &__label {
+        color: $title-color;
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 2.5px;
+        font-weight: normal;
+    }
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+        button {
+            margin-top: 30px;
+            font-size: 16px;
+            padding: 7px 10px;
+            cursor: pointer;
+            //@include border-radius(5px);
+            //border: 1px solid $primary-color;
+            //transition: $transition;
+            //color: #fff;
+            //background-color: $primary-color;
+            //&:hover {
+            //    border-color: $primary-light-color;
+            //    background-color: $primary-light-color;
+            //}
+            &.ghost {
+                background-color: transparent;
+                color: $primary-color;
+                &:hover {
+                    color: $primary-light-color;
+                    border-color: $primary-light-color;
+                }
+            }
+        }
+    }
+}
+
+textarea.form-card__input {
+    padding-top: 9px;
+    resize: none;
+    height: auto;
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+}
+
+.captcha {
+    position: relative;
+    &__img {
+        position: absolute;
+        #{$left}: 3px;
+        bottom: 7px;
+        z-index: 2;
+    }
+    &__link {
+        position: absolute;
+        #{$left}: 97px;
+        top: -35px;
+        padding: 0 10px;
+        color: $primary-color;
+        background-color: $light-color;
+        z-index: 1;
+        span {
+            font-size: 27px;
+            transition: $transition;
+            &:hover {
+                color: $primary-light-color;
+            }
+        }
+    }
+}
+
+.mySelectOption {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    /*Styling Selectbox*/
+    &__wrapper {
+        width: 100%;
+        text-align: $right;
+        display: inline-block;
+        background-color: #fff;
+        border: 1.5px solid #bcbdc09c;
+        border-radius: 5px;
+        transition: all .5s ease;
+        position: relative;
+        font-size: 13px;
+        color: #d0d0d0;
+        height: calc(3.55rem + 2px);
+        .select {
+            cursor: pointer;
+            display: block;
+            padding: 7px 10px 10px 10px;
+            &>i {
+                font-size: 12px;
+                color: #d0d0d0;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                float: $left;
+                line-height: 20px
+            }
+        }
+        &:hover {
+            box-shadow: 0 0 4px rgb(204, 204, 204)
+        }
+        &:active {
+            background-color: #f8f8f8
+        }
+        &:focus {
+            outline: none;
+        }
+        &.active,
+        &.active:hover {
+            box-shadow: 0 0 4px rgb(204, 204, 204);
+            @include border-radius(5px);
+            background-color: #f8f8f8
+        }
+        &.active .select>i {
+            transform: rotate(-90deg)
+        }
+        .dropdown-menu {
+            margin-top: 3px;
+            position: absolute;
+            background-color: #fff;
+            width: 100%;
+            #{$right}: 0;
+            margin-top: 1px;
+            box-shadow: 0 1px 2px rgb(204, 204, 204);
+            @include border-radius(5px);
+            overflow: hidden;
+            display: none;
+            max-height: 144px;
+            text-align: $right;
+            overflow-y: auto;
+            z-index: 9;
+            padding: 0;
+            list-style: none;
+            li {
+                padding: 10px;
+                transition: all .2s ease-in-out;
+                cursor: pointer;
+                font-size: 1.3rem;
+                &:hover {
+                    background-color: #f2f2f2;
+                }
+                &:active {
+                    background-color: #e2e2e2
+                }
+            }
+        }
+    }
+}
+
+form em.error {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: lighten($error-color, 20%);
+    font-size: 11px;
+    margin-top: 7px;
+    padding: 0 0 0 4px;
+    &::before {
+        content: "*";
+        margin-left: 2px;
+        margin-bottom: -5px;
+    }
+}
+
+.login form em.error {
+    color: $light-color;
+    position: absolute;
+    bottom: -16px;
+    #{$right}: 0;
+    font-size: 10px;
+}

@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icons/icomoon.eot?fyiy79');
+  src:  url('../fonts/icons/icomoon.eot?fyiy79#iefix') format('embedded-opentype'),
+  url('../fonts/icons/icomoon.ttf?fyiy79') format('truetype'),
+  url('../fonts/icons/icomoon.woff?fyiy79') format('woff'),
+  url('../fonts/icons/icomoon.svg?fyiy79#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eye-hidden:before {
+  content: "\e917";
+}
+.icon-eye:before {
+  content: "\e997";
+}
+.icon-mobile:before {
+  content: "\e918";
+}
+.icon-mobile-outline:before {
+  content: "\e919";
+}
+.icon-phone-outline:before {
+  content: "\e91a";
+}
+.icon-email:before {
+  content: "\e91b";
+}
+.icon-email-outline:before {
+  content: "\e91c";
+}
+.icon-user-interface-outline:before {
+  content: "\e91e";
+}
+.icon-support1:before {
+  content: "\e994";
+}
+.icon-clipboard-list:before {
+  content: "\e907";
+}
+.icon-todo-list-2-outline:before {
+  content: "\e909";
+}
+.icon-chat:before {
+  content: "\e90d";
+}
+.icon-message:before {
+  content: "\e90e";
+}
+.icon-eitaa:before {
+  content: "\e97e";
+}
+.icon-circle-github:before {
+  content: "\e921";
+}
+.icon-linkedin-outline:before {
+  content: "\e924";
+}
+.icon-linkedin-square:before {
+  content: "\e925";
+}
+.icon-telegram-circle:before {
+  content: "\e92b";
+}
+.icon-telegram-original:before {
+  content: "\e92c";
+}
+.icon-telegram-original-outline:before {
+  content: "\e92d";
+}
+.icon-map:before {
+  content: "\e97f";
+}
+.icon-map-outline:before {
+  content: "\e95a";
+}
+.icon-phone:before {
+  content: "\e97a";
+}
+.icon-user1:before {
+  content: "\e979";
+}
+.icon-user-outline:before {
+  content: "\e940";
+}
+.icon-home:before {
+  content: "\e96c";
+}
+.icon-home-outline:before {
+  content: "\e941";
+}
+.icon-linkedin:before {
+  content: "\e959";
+}
+.icon-linkedin-square-outline:before {
+  content: "\e95d";
+}
+.icon-whatsapp:before {
+  content: "\e98b";
+}
+.icon-whatsapp-outline:before {
+  content: "\e965";
+}
+.icon-telegram:before {
+  content: "\e98c";
+}
+.icon-telegram-outline:before {
+  content: "\e967";
+}
+.icon-instagram:before {
+  content: "\e98d";
+}
+.icon-instagram-outline:before {
+  content: "\e96d";
+}
+.icon-bulb:before {
+  content: "\e900";
+  color: #ff702a;
+}
+.icon-envelop:before {
+  content: "\e901";
+}
+.icon-globe:before {
+  content: "\e902";
+  color: #ff702a;
+}
+.icon-projects:before {
+  content: "\e903";
+}
+.icon-resume:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-support:before {
+  content: "\e905";
+  color: #ff702a;
+}
+.icon-user:before {
+  content: "\e906";
+  color: #fff;
+}

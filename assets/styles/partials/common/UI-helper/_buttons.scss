@@ -1,0 +1,128 @@
+.main-btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: $button-border-radius;
+  color:  $light-color;
+  font-size: 12px;
+  transition: $transition;
+  
+  &__icon,
+  &__text {
+    transition: $transition;
+  }
+  
+  &-sm {
+    padding: 10px 11px;
+  }
+  
+  &-lg {
+    padding: 16px 22px;
+  }
+  
+  &-primary {
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    color: $light-color;
+    
+    &:hover {
+      background-color: $primary-dark-color;
+      color: $light-color;
+    }
+  } /* primary button */
+  
+  &-primary-outline {
+    border: 1px solid $primary-color;
+    background-color: transparent;
+    color: $primary-color;
+    
+    &:hover {
+      border-color: $light-color;
+      background-color: transparent;
+      color: $primary-color;
+    }
+  } /* secondary outline button */
+  
+  &-secondary {
+    border: 1px solid $secondary-color;
+    background-color: $secondary-color;
+    color: $light-color;
+    
+    &:hover {
+      background-color: $secondary-dark-color;
+      color: $light-color;
+    }
+  } /* secondary button */
+  
+  &-secondary-outline {
+    border: 1px solid $secondary-color;
+    background-color: transparent;
+    color: $secondary-color;
+    
+    &:hover {
+      border-color: $light-color;
+      background-color: transparent;
+      color: $secondary-color;
+    }
+  } /* secondary outline button */
+  
+  &-primary-flat {
+    background-color: $primary-subtle-color;
+    color: $primary-color;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: $light-color;
+    }
+  } /* primary flat button */
+  
+  &-secondary-flat {
+    background-color: $secondary-subtle-color;
+    color: $secondary-color;
+    
+    &:hover {
+      background-color: $secondary-color;
+      color: $light-color;
+    }
+  } /* secondary flat button */
+  
+  &-primary-link {
+    color: $primary-color;
+    
+    &:hover {
+      color: $secondary-color;
+    }
+  } /* primary link button */
+  
+  &-secondary-link {
+    color: $secondary-color;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  } /* link button */
+  
+  &-header {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: $title-color !important;
+    gap: 8px;
+    
+    .main-btn__icon {
+      font-size: 16px;
+    }
+  } /* header button */
+  
+  &.disabled,
+  &:disabled {
+    border-color: $disabled-color !important;
+    background-color: $disabled-color !important;
+    color: mix($dark-color, $disabled-color, 30%) !important;
+    cursor: not-allowed;
+  }
+} /* main btn */

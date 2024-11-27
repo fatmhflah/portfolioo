@@ -1,0 +1,6 @@
+.idea/*
+*.rar
+.vscode/*
+node_modules/*
+assets/images/dummy/*
+assets/video/*.mp4

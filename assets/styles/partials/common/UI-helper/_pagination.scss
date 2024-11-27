@@ -1,0 +1,40 @@
+.my-pagination {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .page-nav-link {
+    background-color: $primary-subtle-color;
+    color: $primary-color;
+    -webkit-border-radius: 9px !important;
+    -moz-border-radius: 9px !important;
+    border-radius: 9px !important;
+    margin: 3px;
+    width: 29px;
+    height: 29px;
+    transition: $transition;
+    @include flexrow-center;
+
+    &:hover {
+      background-color: $primary-light-color;
+      color: #fff;
+
+    }
+    &.active {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+
+  .pages-wrapper {
+    display: flex;
+    max-width: 92%;
+    @media only screen and (max-width: 575.98px) {
+      width: auto;
+      max-width: 140px;
+      height: 37px;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+  }
+}

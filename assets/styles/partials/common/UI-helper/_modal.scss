@@ -1,0 +1,51 @@
+.modal {
+  .modal-content {
+    border-radius: $border-radius;
+    overflow: hidden;
+  } /* modal modal content */
+  
+  &__close {
+    position: absolute;
+    top: 15px;
+    #{$left}: 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: auto;
+    height: auto;
+    z-index: 3;
+    
+    &:hover {
+      [class^='icon-'] {
+        color: $title-color;
+      }
+    }
+    
+    [class^='icon-'] {
+      color: $object-color;
+      font-size: 12px;
+      transition: $transition;
+    }
+  } /* modal close */
+  
+  .modal__title {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid darken($light-color, 15%);
+    color: $title-color;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .modal-body {
+    .main-btn {
+      padding: 10px 20px;
+    }
+  }
+  
+  &__button {
+    width: 100%;
+    padding: 15px !important;
+  }
+} /* modal */

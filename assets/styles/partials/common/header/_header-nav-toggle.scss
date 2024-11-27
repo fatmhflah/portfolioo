@@ -1,0 +1,49 @@
+.nav-toggle {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-radius: $border-radius;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1000;
+}
+.nav-toggle.active {
+  position: fixed;
+  top: 10px;
+}
+.nav-toggle.active span {
+  background: $primary-color;
+}
+.nav-toggle span {
+  width: 30px;
+  height: 2.7px;
+  #{$right}: 10px;
+  position: absolute;
+  border-radius: 4px;
+  background: $primary-color;
+  transition: 0.5s;
+}
+.nav-toggle span:nth-child(1) {
+  transform: translateY(-15px);
+  width: 19px;
+}
+.nav-toggle.active span:nth-child(1) {
+  width: 30px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.125s;
+}
+.nav-toggle span:nth-child(2) {
+  transform: translateY(15px);
+  width: 9px;
+}
+.nav-toggle.active span:nth-child(2) {
+  width: 30px;
+  transform: translateY(0px) rotate(315deg);
+  transition-delay: 0.25s;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: translateX(60px);
+}

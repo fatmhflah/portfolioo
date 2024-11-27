@@ -1,0 +1,78 @@
+.nav-tabs {
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  gap: 0 45px;
+  transition: $transition;
+
+  &.mobile {
+    .nav-link {
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: $border-radius $border-radius 0 0;
+        background-color: $primary-color;
+        opacity: 0;
+        transition: $transition;
+      }
+      &.active {
+        &:before {
+          opacity: 1;
+        }
+      }
+    } /* mobile nav link */
+    .blob {
+      display: none;
+    } /* mobile blob */
+  } /* nav tabs mobile */
+
+  .nav-link {
+    color: $title-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    padding: 5px 0 15px 0;
+    border: 0 transparent;
+    position: relative;
+    transition: $transition;
+    @media only screen and (max-width: 575.98px) {
+      font-size: 13px;
+      //padding: 8px;
+    }
+
+    &.active {
+      color: $primary-color;
+      background-color: transparent;
+    } /* nav link active */
+
+    &.reserve {
+      gap: 5px;
+      .title {
+        padding: 4px 10px;
+        border-radius: $border-radius;
+        background-color: lighten($error-color, 60%);
+        color: lighten($error-color, 18%);
+        font-size: 10px;
+        font-weight: 600;
+      } /* reserve title */
+    } /* nav link reserve */
+
+  } /* nav tabs nav link */
+
+  .blob {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: auto;
+    height: 5px;
+    border-radius: $border-radius $border-radius 0 0;
+    background-color: $primary-color;
+    transition: $transition;
+  } /* nav tabs blob */
+
+} /* nav tabs */

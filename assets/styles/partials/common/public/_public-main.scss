@@ -1,0 +1,208 @@
+
+body {
+  font-family: "kalameh";
+  font-weight: normal;
+  //background-color: $main-background;
+  text-align: $right;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+a, button, input, textarea, a:focus, .page-link, .page-link:focus {
+  outline: none !important;
+  resize: none;
+  text-decoration: none;
+  box-shadow: 0 0 0;
+}
+/*-------------------------------------- selection --------------------------------------*/
+::selection {
+  background: $primary-light-color;
+  color: $light-color;
+}
+
+::-webkit-selection {
+  background: $primary-light-color;
+  color: $light-color;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9e9e9e;
+}
+
+::-webkit-scrollbar-track {
+  background: #dadada;
+}
+
+/*-------------------------------------- remove autoComplete default background --------------------------------------*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px $light-color inset !important;
+}
+
+/*-------------------------------------- changing bootstrap default styles --------------------------------------*/
+[class*="text-primary"] {
+  color: $primary-color !important;
+}
+
+.tooltip {
+  font-family: 'iranyekan';
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: transparent;
+}
+
+/* پنهان کردن هر دو آیکن به صورت پیش‌فرض */
+.theme-icon {
+  display: none;
+}
+
+/* حالت لایت: نمایش آیکن خورشید */
+body:not(.dark-mode) #sun-icon {
+  display: block;
+}
+
+/* حالت دارک: نمایش آیکن ماه */
+body.dark-mode #moon-icon {
+  display: block;
+}
+
+/* _variables.scss */
+
+/* تم لایت */
+$background-light: #ffffff;
+$text-light: #333333;
+$link-light: #1e90ff;
+$header-light: #f0f0f0;
+
+/* تم دارک */
+$background-dark: #222;
+$text-dark: #ffffff;
+$link-dark: #ff6347;
+$header-dark: #1e1e1e;
+/* _base.scss */
+
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--link-color-light);
+}
+
+header {
+  background-color: var(--header-color-light);
+  padding: 20px;
+}
+/* _theme.scss */
+
+/* تم لایت (پیش‌فرض) */
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #333333;
+  --link-color-light: #1e90ff;
+  --header-color-light: #f0f0f0;
+  --primary-color: #D79D4B;
+  --desc-color-light: #3d3d3d;
+  --blur-bg-light: #d1d1d1;
+}
+
+/* تم دارک */
+body.dark-mode {
+  --background-color-light: #222;
+  --text-color-light: #ffffff;
+  --link-color-light: #ff6347;
+  --header-color-light: #1e1e1e;
+  --desc-color-light: #dcd7d7;
+  --blur-bg-light: #313131;
+}
+#theme-toggle {
+  background-color: transparent;
+  border: 0;
+}
+.cursor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: none;
+  z-index: 111;
+  border: 1px solid var(--primary-color);
+  transition: all 0.2s ease-out;
+  animation: moveCursor1 .5s infinite alternate;
+
+  span {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color:  var(--primary-color);
+  }
+}
+
+.expand {
+  background: transparent;
+  animation: moveCursor2 .5s forwards;
+  border: 1px solid yellow;
+}
+
+@keyframes moveCursor1 {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(.8);
+  }
+}
+
+@keyframes moveCursor2 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(2.5);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
