@@ -232,6 +232,11 @@
   background-color: var(--background-color-light);
   border-radius: 35px;
   overflow: hidden;
+  @media screen and (max-width: 991.98px) {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 25px;
+  }
 
   .profile-content {
     padding-bottom: 30px;
@@ -244,6 +249,7 @@
       height: 100%;
       max-height: 350px;
       object-fit: cover;
+      aspect-ratio: 3/2;
     }
   }
 
@@ -431,6 +437,10 @@
   opacity: 0; /* اسلایدها در ابتدا دیده نمی‌شوند */
   transform: translateY(30px); /* اسلایدها کمی پایین‌تر قرار می‌گیرند */
   transition: all 0.5s ease-in-out; /* انیمیشن نرم و روان */
+
+  .img {
+    aspect-ratio: 3/4;
+  }
 }
 
 /* اسلاید فعال با انیمیشن */
@@ -494,3 +504,201 @@
   }
 }
 
+
+/* ============================================
+   RESPONSIVE – TABLET & MOBILE  (≤ 991px)
+   ============================================ */
+
+@media screen and (max-width: 991.98px) {
+
+  /* ---------- page layout ---------- */
+  .index-page {
+    height: auto !important;
+    min-height: 100svh;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 80px;
+    gap: 15px;
+
+    .main-content {
+      width: 100% !important;
+      height: auto !important;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .tab-content {
+      width: 100% !important;
+      border-radius: 20px;
+      height: auto !important;
+      min-height: 50vh;
+      padding: 20px;
+    }
+  }
+
+  /* ---------- header → fixed bottom tab bar ---------- */
+  #main-header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    border-radius: 20px 20px 0 0;
+    margin: 0 !important;
+
+    z-index: 999;
+    box-shadow: 0 -2px 10px rgb(0 0 0 / 15%);
+
+    .row {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-around !important;
+      align-items: center !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100%;
+    }
+  }
+
+  /* hide hamburger – we show all items directly */
+  .nav-toggle {
+    display: none !important;
+  }
+
+  /* override slide-in behaviour → always visible horizontal bar */
+  nav.main-navbar {
+    position: static !important;
+    width: 100%;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    height: auto !important;
+
+    .main-nav {
+      position: static !important;
+      right: auto !important;
+      left: auto !important;
+      width: auto !important;
+      height: auto !important;
+      flex-direction: row !important;
+      background-color: transparent !important;
+      padding: 0 !important;
+      gap: 0 !important;
+      white-space: normal !important;
+    }
+
+    .navbar-overlay {
+      display: none !important;
+    }
+  }
+
+  .main-nav__item {
+    width: auto !important;
+    padding-bottom: 0 !important;
+
+    &:before {
+      display: none !important;
+    }
+  }
+
+  .main-nav__link {
+    flex-direction: column !important;
+    gap: 3px !important;
+    padding: 6px 12px !important;
+
+    .icon {
+      font-size: 20px !important;
+    }
+
+
+  }
+
+  /* theme toggle inside bottom bar */
+  #theme-toggle {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 6px 12px;
+    cursor: pointer;
+
+    .theme-icon {
+      font-size: 20px;
+    }
+  }
+
+
+  /* ---------- gallery grid ---------- */
+  .gallery-container {
+    gap: 15px;
+  }
+
+  .project img {
+    width: 150px;
+    height: 112px;
+  }
+}
+
+
+/* ============================================
+   RESPONSIVE – SMALL MOBILE  (≤ 575px)
+   ============================================ */
+
+@media screen and (max-width: 575.98px) {
+
+  .index-page {
+    padding-bottom: 90px;
+
+
+    .tab-content {
+      padding: 15px;
+      border-radius: 15px;
+    }
+  }
+
+  .main-nav__link {
+    padding: 6px 7px !important;
+
+
+
+    .icon {
+      font-size: 17px !important;
+    }
+  }
+
+  #theme-toggle {
+    padding: 6px 7px !important;
+
+    .theme-icon {
+      font-size: 17px !important;
+    }
+  }
+
+  .profile {
+    .title {
+      font-size: 22px;
+    }
+
+
+  }
+
+  .gallery-container {
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .project img {
+    width: 130px;
+    height: 98px;
+  }
+
+  /* services already stack via Bootstrap col-lg-4 */
+}
+
+@media screen and (max-width: 991.98px) {
+  .index-page {
+    margin-top: 50px;
+  }
+}
